@@ -779,6 +779,7 @@ img {
 }
 .form-icon {
 }
+
 .form-icon:hover {
   fill: var(--blue);
 }
