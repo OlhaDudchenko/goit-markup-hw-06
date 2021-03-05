@@ -8,6 +8,8 @@
   --blue: #2196f3;
   --black: #000000;
   --list-gap: 30px;
+  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --time: 250ms;
 }
 ul {
   list-style: none;
@@ -121,7 +123,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   position: relative;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time) var(--time-function);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -165,7 +167,7 @@ img {
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time) var(--time-function);
 }
 .list-cont .mail:hover,
 .list-cont .mail:focus,
@@ -432,8 +434,8 @@ img {
   border-radius: 50px;
   /* outline: 1px solid red; */
   color: #afb1b8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--time) var(--time-function),
+    color var(--time) var(--time-function);
 }
 
 .team-link:hover,
@@ -468,8 +470,8 @@ img {
   width: 170px;
   height: 90px;
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time) var(--time-function),
+    border var(--time) var(--time-function);
 }
 .clients-list:nth-child(6n) {
   margin-right: 0px;
@@ -550,7 +552,7 @@ img {
   border-radius: 50px;
   color: var(--white);
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--time) var(--time-function);
 
   /* outline: 1px solid red; */
 }
@@ -596,9 +598,9 @@ img {
   min-width: 73px;
   /* outline: none; */
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time) var(--time-function),
+    background-color var(--time) var(--time-function),
+    box-shadow var(--time) var(--time-function);
 }
 
 .filters .item:hover,
@@ -640,21 +642,16 @@ img {
   margin-bottom: 0px;
 }
 
-.serv-list .item {
+.serv-card .item {
   text-decoration: none;
   display: block;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--time) var(--time-function);
 }
 .serv-card .item:hover,
 .serv-card .item:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-/* .serv-card :hover,
-.serv-card :focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-} */
 
 .title {
   padding: 20px 24px;
@@ -715,7 +712,7 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
   transform: translatey(100%);
   opacity: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--time) var(--time-function);
 }
 
 .serv-card:hover .overlay {
@@ -731,8 +728,8 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--time) var(--time-function),
+    visibility var(--time) var(--time-function);
 }
 
 .backdrop.is-hidden {
@@ -756,7 +753,7 @@ img {
   border-radius: 4px;
   padding: 40px;
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--time) var(--time-function);
 }
 
 .modal-btn {
@@ -772,6 +769,7 @@ img {
   border-radius: 50%;
   background-color: var(--white);
   cursor: pointer;
+  transition: color var(--time) var(--time-function);
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -815,6 +813,7 @@ input:focus + .form-icon {
   margin-right: 8.38px;
   border-radius: 2px;
   background-color: inherit;
+  transition: display var(--time) var(--time-function);
 }
 
 .check-icon use {
@@ -826,11 +825,11 @@ input:focus + .form-icon {
 .check-input:checked + .check-icon {
   border: none;
 }
-/* .checkbox-wrapper {
+.checkbox-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-} */
+}
 
 textarea {
   resize: none;
@@ -838,6 +837,7 @@ textarea {
   padding: 12px 16px;
   width: 100%;
   border-radius: 4px;
+  transition: border-color var(--time) var(--time-function);
 }
 .form-comment textarea::placeholder {
   font-size: 12px;
@@ -892,6 +892,7 @@ textarea {
   border-radius: 4px;
   padding: 11px 30px;
   width: 100%;
+  transition: border-color var(--time) var(--time-function);
 }
 .input-wrapper {
   position: relative;
@@ -900,6 +901,7 @@ textarea {
   position: absolute;
   top: 11px;
   left: 12px;
+  transition: fill var(--time) var(--time-function);
 }
 
 .form-field label,
@@ -927,17 +929,12 @@ textarea {
   border: 1px solid var(--blue);
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--time) var(--time-function);
 }
 .btn-submit:focus,
 .btn-submit:hover {
   background-color: #188ce8;
 }
-
-/* .form-checkbox [type="checkbox"] {
-  height: 15px;
-  width: 16px;
-  border-radius: 0px;
-} */
 
 .subscribe-news [type="submit"] {
   color: var(--white);
