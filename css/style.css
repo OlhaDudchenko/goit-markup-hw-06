@@ -789,12 +789,12 @@ input:focus + .form-icon {
 .input-wrapper input:focus,
 .input-wrapper input:hover {
   border-color: var(--blue);
-  /* outline: none; */
+  outline-color: var(--blue);
 }
 .signup-form textarea:focus,
 .signup-form textarea:hover {
   border-color: var(--blue);
-  /* outline: none; */
+  outline-color: var(--blue);
 }
 
 .check-input {
